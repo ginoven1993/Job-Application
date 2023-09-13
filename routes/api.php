@@ -18,8 +18,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::match(['get', 'post'], '/tasks', 'App\Http\Controllers\EvenementController@details');
-Route::match(['get', 'post'], '/tasks/store', 'App\Http\Controllers\EvenementController@store');
-Route::match(['get', 'post'], '/tasks/edit/{id}', 'App\Http\Controllers\EvenementController@edit');
-Route::match(['get', 'post'], '/tasks/delete/{id}', 'App\Http\Controllers\EvenementController@delete');
+Route::match(['get', 'post'], '/tasks', 'App\Http\Controllers\TaskController@details');
+Route::match(['get', 'post'], '/tasks/store', 'App\Http\Controllers\TaskController@store');
+Route::match(['get', 'post'], '/tasks/edit/{id}', 'App\Http\Controllers\TaskController@edit');
+Route::match(['get', 'post'], '/tasks/delete/{id}', 'App\Http\Controllers\TaskController@delete');
 
